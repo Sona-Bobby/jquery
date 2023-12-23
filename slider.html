@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+          <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css" />
+          <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        img{
+            float: left;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        ul,
+        li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="lightSlider" class="gallery">
+        <li data-thumb="img/thumb/1.jpg">
+            <a href="#"><img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" /> </a>
+        </li>
+        <li data-thumb="img/thumb/2.jpg">
+            <a href="#"><img src="https://th.bing.com/th/id/R.9d812e0638aec020faa11d89795bb90f?rik=A006j6sL742cww&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f07%2fnatural-landscape-purple-lake-wallpaper-.jpg&ehk=pAMyN7JHIDi73moP1dIjfu7zY10pXVNw92GFzZalDaE%3d&risl=&pid=ImgRaw&r=0"/>
+            </a>
+        </li>
+        <li data-thumb="img/thumb/3.jpg">
+            <a href="#"><img src="https://th.bing.com/th/id/R.13820971a962ffbeb63a8fef36185b16?rik=vZ3lu%2blbhy6jxw&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f03%2f10%2f319576-photography-landscape-nature-water-grass-trees-plants-sunrise-lake.jpg&ehk=6WS2p9KknQa9F%2bgAH16n44NReuUyS2rzXah2zy7kiAw%3d&risl=&pid=ImgRaw&r=0"/>
+            </a>
+        </li>
+
+    </ul>
+
+    <script>
+        $ (document).ready(function(){
+            $('#lightSlider').lightSlider({
+                item:1,
+                slideMove:1,
+                slideMargin:10,
+                mode:"slide",
+                useCSS:true,
+                speed:2000,
+                auto:true,
+                pause:4500,
+                loop:true,
+                controls:true,
+                keyPress:true,
+                pager:true,
+                gallery:true,
+                thumbMargin:3,
+                currentPagerPosition:'middle',
+                enableDrag:true,
+                swipeThreshold:40,
+                responsive:[],
+                onBeforeStart:function($el){},
+                onSliderLoad: function($el){},
+                onBeforeSlide:function($el, scene){},
+                onAfterSlide:function($el, scene){},
+                             onBeforeNextSlide: function($el, scene) {},
+                             onBeforePrevSlide:function($el,scene){}
+            });
+        })
+    </script>
+
+</body>
+
+</html>
